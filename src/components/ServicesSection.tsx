@@ -49,14 +49,26 @@ const ServiceCard = ({ service, index }: { service: typeof services[0]; index: n
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 50, rotateX: -15 }}
+      animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : { opacity: 0, y: 50, rotateX: -15 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="glass-card p-8 group hover:border-primary/30 transition-all duration-500"
+      whileHover={{ 
+        y: -10, 
+        transition: { duration: 0.3 },
+      }}
+      className="glass-card p-8 group hover:border-primary/30 transition-all duration-500 relative overflow-hidden"
     >
-      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+      {/* Shimmer effect on hover */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+      
+      <motion.div 
+        className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-6 relative"
+        whileHover={{ scale: 1.1, rotate: 5 }}
+        transition={{ type: "spring", stiffness: 300 }}
+      >
         <service.icon className="w-7 h-7 text-primary" />
-      </div>
+        <div className="absolute inset-0 rounded-xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      </motion.div>
       
       <h3 className="font-heading text-2xl font-semibold text-foreground mb-4">
         {service.title}
@@ -67,13 +79,16 @@ const ServiceCard = ({ service, index }: { service: typeof services[0]; index: n
       </p>
       
       <div className="flex flex-wrap gap-2">
-        {service.features.map((feature) => (
-          <span
+        {service.features.map((feature, i) => (
+          <motion.span
             key={feature}
-            className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+            transition={{ delay: index * 0.1 + i * 0.05 + 0.3 }}
+            className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300"
           >
             {feature}
-          </span>
+          </motion.span>
         ))}
       </div>
     </motion.div>
