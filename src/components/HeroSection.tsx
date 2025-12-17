@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
-import hero3DVisual from "@/assets/hero-3d-visual.png";
+import { HeroBackground } from "./HeroBackground";
 
 export const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Three.js Animated Background */}
+      <HeroBackground />
+      
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(190_100%_50%/0.1)_0%,transparent_50%)]" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
@@ -12,22 +15,6 @@ export const HeroSection = () => {
       
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(hsl(222_30%_18%/0.3)_1px,transparent_1px),linear-gradient(90deg,hsl(222_30%_18%/0.3)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
-
-      {/* 3D Visual Element */}
-      <motion.div 
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] lg:w-[700px] opacity-60 pointer-events-none"
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 0.6, x: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      >
-        <motion.img 
-          src={hero3DVisual} 
-          alt="" 
-          className="w-full h-auto"
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </motion.div>
 
       <div className="max-w-7xl mx-auto px-6 py-32 relative z-10">
         <div className="text-center">
