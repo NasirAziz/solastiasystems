@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
+import hero3DVisual from "@/assets/hero-3d-visual.png";
 
 export const HeroSection = () => {
   return (
@@ -11,6 +12,22 @@ export const HeroSection = () => {
       
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(hsl(222_30%_18%/0.3)_1px,transparent_1px),linear-gradient(90deg,hsl(222_30%_18%/0.3)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
+
+      {/* 3D Visual Element */}
+      <motion.div 
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] lg:w-[700px] opacity-60 pointer-events-none"
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 0.6, x: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
+        <motion.img 
+          src={hero3DVisual} 
+          alt="" 
+          className="w-full h-auto"
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </motion.div>
 
       <div className="max-w-7xl mx-auto px-6 py-32 relative z-10">
         <div className="text-center">
