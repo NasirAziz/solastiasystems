@@ -22,10 +22,10 @@ import { cn } from "@/lib/utils";
 
 const countries = [
   "United States", "Canada", "United Kingdom", "Germany", "France", "Netherlands",
-  "Switzerland", "Australia", "India", "Japan", "Singapore", "Brazil", "Mexico",
+  "Switzerland", "Australia", "India",  "Japan", "Singapore", "Brazil", "Mexico",
   "Spain", "Italy", "Sweden", "Norway", "Denmark", "Finland", "Ireland", "Belgium",
-  "Austria", "Poland", "Czech Republic", "Portugal", "New Zealand", "South Korea",
-  "Israel", "United Arab Emirates", "Saudi Arabia", "South Africa", "Argentina",
+  "Austria", "Poland", "Czech Republic", "Pakistan","Portugal", "New Zealand", "South Korea",
+  "United Arab Emirates", "Saudi Arabia", "South Africa", "Argentina",
 ];
 
 export const ContactForm = () => {
@@ -120,9 +120,9 @@ export const ContactForm = () => {
             </h2>
             <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
               Fill out the form and our team will reach out within 24 hours to discuss 
-              how we can help transform your business with AI and expert talent.
+              how we can help transform your business.
             </p>
-
+            {/* with AI and expert talent */}
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -130,7 +130,7 @@ export const ContactForm = () => {
                 </div>
                 <div>
                   <div className="font-medium text-foreground">Global Coverage</div>
-                  <div className="text-sm text-muted-foreground">US • Canada • Europe • APAC</div>
+                  <div className="text-sm text-muted-foreground">US • Canada • Europe • APAC • Middle East • Africa</div>
                 </div>
               </div>
               

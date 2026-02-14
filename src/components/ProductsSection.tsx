@@ -123,7 +123,7 @@ export const ProductsSection = () => {
           </motion.div>
         ))}
 
-        {/* Coming Soon Products */}
+        {/* Coming Soon Products
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -149,7 +149,7 @@ export const ProductsSection = () => {
               <p className="text-foreground font-medium">{product.description}</p>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

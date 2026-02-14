@@ -67,7 +67,10 @@ export const CTASection = () => {
               </div>
               <div className="text-sm text-muted-foreground">Call Us</div>
               <a href="tel:+1234567890" className="text-foreground font-medium hover:text-primary transition-colors">
-                +1 (234) 567-890
+                +92 (312) 0828136
+              </a>
+              <a href="tel:+1234567890" className="text-foreground font-medium hover:text-primary transition-colors">
+                +92 (302) 5988692
               </a>
             </div>
             
@@ -75,9 +78,9 @@ export const CTASection = () => {
               <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-primary" />
               </div>
-              <div className="text-sm text-muted-foreground">Global Presence</div>
+              <div className="text-sm text-muted-foreground">Global Coverage</div>
               <span className="text-foreground font-medium">
-                US • Canada • Europe
+                US • Canada • Europe • APAC • Middle East • Africa
               </span>
             </div>
           </div>

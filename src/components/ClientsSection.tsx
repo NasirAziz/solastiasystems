@@ -3,17 +3,17 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const clients = [
-  { name: "NVIDIA", logo: "NVIDIA" },
-  { name: "BMW", logo: "BMW" },
-  { name: "Microsoft", logo: "Microsoft" },
-  { name: "Google", logo: "Google" },
-  { name: "Amazon", logo: "Amazon" },
-  { name: "Meta", logo: "Meta" },
-  { name: "Tesla", logo: "Tesla" },
-  { name: "Apple", logo: "Apple" },
-  { name: "IBM", logo: "IBM" },
-  { name: "Oracle", logo: "Oracle" },
-  { name: "SAP", logo: "SAP" },
+  { name: "Delmon-Group-of-Companies", logo: "Delmon" },
+  { name: "Get-Print", logo: "GetPrint" },
+  { name: "Lumen Lab", logo: "LumenLabEnterprises" },
+  { name: "Marvellent", logo: "Marvellent" },
+  { name: "Sard.SA", logo: "سرد" },
+  { name: "Hrbs", logo: "HRBS" },
+  // { name: "Tesla", logo: "Tesla" },
+  // { name: "Apple", logo: "Apple" },
+  // { name: "IBM", logo: "IBM" },
+  // { name: "Oracle", logo: "Oracle" },
+  // { name: "SAP", logo: "SAP" },
   { name: "Salesforce", logo: "Salesforce" },
 ];
 
@@ -34,10 +34,10 @@ export const ClientsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="text-primary font-medium mb-4 block">Trusted By Industry Leaders</span>
+          <span className="text-primary font-medium mb-4 block">Trusted By Many</span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
             Powering Innovation at
-            <span className="gradient-text"> Fortune 500</span> Companies
+            <span className="gradient-text"> Global 50+</span> Clients
           </h2>
         </motion.div>
       </div>
