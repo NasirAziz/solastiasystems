@@ -117,10 +117,10 @@ export const Footer = () => {
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Solastia Systems. All rights reserved.
+            © {new Date().getFullYear()} Solastia Systems (Private) Limited. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm">
-            Solastia Systems
+            Solastia Systems (Pvt) Ltd
           </p>
         </div>
       </div>
